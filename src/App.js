@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
+import Footer from "./components/Footer";
 import Navbar from './components/Navbar';
 import { About } from './pages/About';
 import { Booking } from './pages/Booking';
@@ -23,6 +24,7 @@ function App() {
         <Route path='/contact' element={<Contact/>}></Route>
         <Route path='/sign-in' element={<SignIn/>}></Route>
       </Routes>
+      <Footer/>
     </div>
   );
 }
