@@ -38,6 +38,12 @@ a{
 
 }
 
+a:hover{
+    text-decoration: none;
+    color: white;
+
+}
+
 .socialmedia{
     display: flex;
     flex-direction: row;

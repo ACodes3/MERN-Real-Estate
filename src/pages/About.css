@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.about-back{
+    background-color: #dfeeed;
+}
+
+
+.header {
+    position: relative;
+    height: 300px; /* Adjust the height as needed */
+    box-shadow: 0 20px 25px rgba(0,0,0,0.15);
+    z-index: 1;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1); /* Adjust the opacity as needed */
+  }
+  
+  .background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: transparent;
+    font-size: 3em; /* Adjust the font size as needed */
+    text-align: center;
+  }
+  
+  /* Add this to your CSS file or create a new one */
+
+.about-us {
+    max-width: 900px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .about-us h1 {
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .about-us h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .about-us p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    align-items: flex-start;
+  }
+
+  .company-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  .section-white{
+    padding: 70px 0;
+  }
+
+  .team-item {
+    background: #f4f5f6;
+    text-align: center;
+    margin: 20px 0;
+    padding: 50px 20px 40px 20px;
+    border-radius: 8px 8px;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+  }
+
+  .team-item:hover {
+    background: #004953;
+    color: white;
+  }
+
+  .team-item h3{
+    margin: 20px 0 1px 0 !important;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+  }
+
+  .section-subtitle{
+    white-space: pre-line;
+  }
+
+  .team-info {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .team-info p{
+    font-style: italic;
+  }
+
+  .team-info::after{
+    background: rgb(41, 71, 41);
+    background: -webkit-linear-gradient(
+        135deg, rgb(50, 98, 98) 0%, rgb(36, 80, 36) 100%
+    );
+    background: -o-linear-gradient(
+        135deg, rgb(50, 98, 98) 0%, rgb(36, 80, 36) 100%
+    );
+    background: -moz-linear-gradient(
+        135deg, rgb(50, 98, 98) 0%, rgb(36, 80, 36) 100%
+    );
+    background: linear-gradient(
+        135deg, rgb(50, 98, 98) 0%, rgb(36, 80, 36) 100%
+    );
+
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    width: 50px;
+    height: 3px;
+    margin-top: -20px;
+
+  }
+
+  .team-img {
+    max-width: 140px;
+    padding: 6px 6px;
+    background-color: #dedede;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+  }
+
+  ul.team-icon{
+    margin-top: 25px;
+  }
+
+  ul.team-icon li {
+    display: inline-block;
+    margin: 0 3px;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+  }
+
+  ul.team-icon li a{
+    margin: 0;
+    display: inline-block;
+    padding: 8px 8px;
+    width: 34px;
+    height: 34px;
+    font-size: 18px;
+    line-height: 18px;
+    background-color: #fff;
+    border-radius: 50%;
+    color: #fff;
+  }
+
+  ul.team-icon li a.twitter{
+    background-color: #057685;
+  }
+
+  ul.team-icon li a.pinterest{
+    background-color: #2d828d;
+  }
+
+  ul.team-icon li a.facebook{
+    background-color: #48939d;
+  }
+
+  ul.team-icon li a.dribbble{
+    background-color: #52abb7;
+  }
+
+  .team-icon li a:hover {
+    color: rgb(170, 236, 209);
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+  }
