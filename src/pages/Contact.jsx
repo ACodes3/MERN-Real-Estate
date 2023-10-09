@@ -1,6 +1,10 @@
+import emailjs from '@emailjs/browser';
 import GoogleMapReact from 'google-map-react';
-import React from 'react';
+import React, { useRef, useState } from 'react';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./Contact.css";
+import headerImg from "./img/contact-banner.png";
 import fbImage from "./img/facebook-app-symbol.png";
 import instaImage from "./img/instagram.png";
 import linkedInImage from "./img/linkedin.png";
@@ -10,9 +14,39 @@ import phoneImage from "./img/phone-call.png";
 import pintImage from "./img/pinterest.png";
 import twitterImage from "./img/twitter.png";
 
+
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
+
 export const Contact = () => {
+  const form = useRef();
+  const [isSending, setIsSending] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    setIsSending(true);
+
+        const serviceId = process.env.REACT_APP_SERVICE_ID;
+        const templateId = process.env.REACT_APP_TEMPLATE_ID;
+        const userId = process.env.REACT_APP_USER_ID;
+
+  
+      emailjs.sendForm(serviceId, templateId, form.current, userId)
+      .then((result) => {
+        console.log(result.text);
+        toast.success("Email sent successfully!");
+      }, (error) => {
+        console.log(error.text);
+        toast.error("Error sending email. Please try again later.");
+      })
+
+      .finally(() => {
+        setIsSending(false);
+      });
+  };
+
+
     const defaultProps = {
         center: {
           lat: 51.5074,
@@ -22,6 +56,11 @@ export const Contact = () => {
       };
   return (
     <div>
+      <div className="header">
+      <div className="overlay"></div>
+      <img src={headerImg} alt="Header Background" className="background-image" />
+      <h1 className="header-text">Contact</h1>
+    </div>
     <section>
     <div className="container">
       <div className="contactInfo">
@@ -59,32 +98,34 @@ export const Contact = () => {
         </ul>
       </div>
       <div className="contactForm">
+      <form ref={form} onSubmit={sendEmail}>
         <h2>Send a Message</h2>
         <div className='formBox'>
             <div className='inputBox w50'>
-                <input type='text' required></input>
+                <input type='text' required name="from_name"></input>
                 <span>First Name</span>
             </div>
             <div className='inputBox w50'>
-                <input type='text' required></input>
+                <input type='text' required name="from_last_name"></input>
                 <span>Last Name</span>
             </div>
             <div className='inputBox w50'>
-                <input type='email' required></input>
+                <input type='email' required name="from_email"></input>
                 <span>Email Address</span>
             </div>
             <div className='inputBox w50'>
-                <input type='text' required></input>
+                <input type='text'required name="from_tel_num"></input>
                 <span>Mobile Number</span>
             </div>
             <div className='inputBox w100'>
-                <textarea required></textarea>
+                <textarea required name="message"></textarea>
                 <span>Write your message here...</span>
             </div>
             <div className='inputBox w100'>
-                <input type='submit' value="Send"></input>
+            <input type="submit" value={isSending ? "Sending..." : "Send"} disabled={isSending} />
             </div>
         </div>
+        </form>
       </div>
     </div>
   </section>
