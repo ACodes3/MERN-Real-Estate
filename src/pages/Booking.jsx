@@ -1,7 +1,10 @@
-import React from 'react'
+import React from 'react';
+import Header from "../Booking/Header/Header";
 
 export const Booking = () => {
   return (
-    <div>Booking</div>
+    <div>
+        <Header/>
+    </div>
   )
 }
