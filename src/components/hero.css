@@ -91,3 +91,59 @@
         opacity: 1;
     }
 }
+
+/* Your existing CSS code */
+
+/* Add a media query for small screens */
+@media (max-width: 767px) {
+    .hero-container {
+        flex-direction: column; /* Stack items vertically on small screens */
+        height: auto; /* Remove fixed height */
+        padding: 1rem; /* Adjust padding */
+    }
+
+    .image-container {
+        order: -1; /* Set the image container to come first */
+        border-radius: 15rem 15rem 0 0; /* Maintain border radius */
+        border: 8px solid #004953; /* Adjust border thickness */
+    }
+
+    .flexColStart, .image-container {
+        max-width: 100%; /* Allow text and image to take full width */
+    }
+
+    .button-group {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+        gap: 8px; /* Adjust gap between buttons */
+    }
+
+    .hero-button {
+        width: 100%; /* Make buttons take full width */
+        margin: 0; /* Remove margin between buttons */
+    }
+}
+
+/* Add a media query for medium screens */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hero-container {
+        padding: 2rem; /* Adjust padding for medium screens */
+    }
+
+    .flexColStart {
+        max-width: 60%; /* Increase max-width for text */
+    }
+
+    .image-container {
+        width: 25rem; /* Adjust image container width */
+        height: 30rem; /* Adjust image container height */
+        border: 6px solid #004953; /* Adjust border thickness */
+    }
+
+    .button-group {
+        gap: 2px; /* Adjust gap between buttons */
+    }
+
+    .hero-button {
+        padding: 0.8rem 1.5rem; /* Adjust button padding */
+    }
+}
