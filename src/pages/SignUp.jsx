@@ -1,8 +1,8 @@
 import React from 'react';
-import "./Signin.css";
 import { Link } from 'react-router-dom';
+import "./Signup.css";
 
-export const SignIn = () => {
+export const SignUp = () => {
   return (
     <div className='div-sign'>
       <div className="login-card-container">
@@ -13,10 +13,20 @@ export const SignIn = () => {
                 </Link></a>
               </div>
               <div className="login-card-header">
-                  <h1>Sign In</h1>
-                  <div>Please login to use the platform</div>
+                  <h1>Sign Up</h1>
+                  <div>Please register to use the platform</div>
               </div>
               <form className="login-card-form">
+              <div className="form-item">
+                    <span class="form-item-icon material-symbols-rounded">person</span>
+                    <input type="text" placeholder="Enter your Name" id="NameForm" 
+                    autofocus required/>
+                </div>
+                <div class="form-item">
+                    <span className="form-item-icon material-symbols-rounded">person</span>
+                    <input type="text" placeholder="Enter your Last Name" id="LastNameForm" 
+                    autofocus required/>
+                </div>
                   <div class="form-item">
                       <span class="form-item-icon material-symbols-rounded">mail</span>
                       <input type="text" placeholder="Enter Email" id="emailForm" 
@@ -32,16 +42,15 @@ export const SignIn = () => {
                           <input type="checkbox" id="rememberMeCheckbox"/>
                           <label for="rememberMeCheckbox">Remember me</label>
                       </div>
-                      <a href="#">I forgot my password!</a>
                   </div>
-                  <button type="submit">Sign In</button>
+                  <button type="submit">Sign Up</button>
               </form>
               <div className="login-card-footer">
-                  Dont have an account? <a href="#">Create an account.</a>
+                  Already have an account? <a href="#">Log in</a>
               </div>
           </div>
           <div className="login-card-social">
-              <div>Other Sign-In Options</div>
+              <div>Other Sign-Up Options</div>
               <div className="login-card-social-btns">
                   <a href="#">
                       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-google" width="24"
