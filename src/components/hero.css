@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=League+Spartan:wght@400;600;800&display=swap');
+
+.hero-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh; /* Set the height to cover the entire viewport */
+    padding: 1.5rem; /* Add padding for spacing */
+    margin: 0 auto; /* Center the content horizontally */
+}
+
+.flexColStart {
+    text-align: left; /* Center the text */
+    max-width: 50%; /* Set maximum width for text */
+}
+
+.image-container {
+    width: 30rem;
+    height: 35rem;
+    overflow: hidden;
+    border-radius: 15rem 15rem 0 0;
+    border: 8px solid #004953;
+}
+
+.image-container > img {
+    width: 100%;
+    height: 100%;
+}
+
+.flexColStart h1 {
+    font-size: 4.5rem; /* Adjust the font size as needed */
+    font-weight: bold; /* Make the text bold */
+    font-family: 'League Spartan', sans-serif;
+}
+
+.flexColStart p {
+    font-size: 1.5rem; /* Adjust the font size as needed */
+    font-family: 'League Spartan', sans-serif;
+}
+
+.button-group {
+    display: flex;
+    gap: 1px; /* Adjust the gap between buttons */
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 5px; /* Add border radius */
+}
+
+.hero-button {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    background-color: #004953;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.hero-button:not(:last-child) {
+    border-right: 2px solid #011f22; /* Add a border between buttons */
+}
+
+.hero-button:hover {
+    background-color: #002c2f;
+}
+
+/* Negative margin to make buttons touch */
+.hero-button:first-child {
+    margin-right: -1px;
+}
+
+.hero-button:last-child {
+    margin-left: -1px;
+}
+
