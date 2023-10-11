@@ -1,0 +1,88 @@
+.mail {
+  width: 100%;
+  margin-top: 50px;
+  background-color: #0e636e;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 50px;
+  border-radius: 10px; /* Added rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added a subtle box shadow */
+}
+
+.mailInputContainer>input {
+  width: 300px;
+  height: 40px; /* Increased height for better visibility */
+  padding: 10px;
+  border: none;
+  margin-right: 10px;
+  border-radius: 5px;
+  box-sizing: border-box; /* Added box-sizing for consistent sizing */
+  font-size: 16px; /* Adjusted font size */
+}
+
+.mailInputContainer>button {
+  height: 50px;
+  width: 120px; /* Increased width for better aesthetics */
+  background-color: #80c3cc;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px; /* Adjusted font size */
+}
+
+.mailInputContainer>button:hover {
+  background-color: #388c97;
+}
+
+/* Added transition for smoother hover effect */
+.mailInputContainer>button {
+  transition: background-color 0.3s ease;
+}
+
+/* Added a subtle hover effect for the input field */
+.mailInputContainer>input:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Added some spacing between the button and input field */
+.mailInputContainer {
+  display: flex;
+  align-items: center;
+}
+
+.mailInputContainer>input,
+.mailInputContainer>button {
+  margin-bottom: 10px;
+}
+
+@media (min-width: 470px) and (max-width: 767px) {
+  .mailInputContainer {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .mailInputContainer>input,
+  .mailInputContainer>button {
+    margin-bottom: 0;
+  }
+
+  .mailInputContainer>button {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 469px) {
+  .mailInputContainer>input,
+  .mailInputContainer>button {
+    width: calc(50% - 5px);
+  }
+
+  .mailInputContainer>button {
+    margin-left: 0;
+  }
+}

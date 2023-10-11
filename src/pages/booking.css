@@ -1,0 +1,25 @@
+.homeContainer {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px; /* Changed z-index value */
+  background-color: #f7f7f7; /* Added a light background color */
+  padding: 20px; /* Added padding for spacing */
+  border-radius: 10px; /* Added rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added a subtle shadow */
+}
+
+.homeTitle {
+  max-width: 800px; /* Changed width to max-width for responsiveness */
+  font-size: 24px; /* Increased font size for emphasis */
+  text-align: center; /* Centered the text */
+  color: #333; /* Set text color to a dark shade */
+  font-weight: bold; /* Added bold font-weight */
+  margin: 0; /* Removed default margin */
+}
+
+/* Added hover effect for title */
+.homeTitle:hover {
+  color: #06707e; /* Changed color on hover to an accent color */
+}
